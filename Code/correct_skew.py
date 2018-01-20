@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("img.jpg")
+img = cv2.imread("udhr_telugu.jpg")
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 gray = cv2.bitwise_not(gray)
 
@@ -24,4 +24,5 @@ cv2.imshow("img",img)
 cv2.waitKey(0)
 
 cv2.imshow("Rotated",rotated)
+cv2.imwrite("001.jpg",rotated)
 cv2.waitKey(0)

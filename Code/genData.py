@@ -39,7 +39,7 @@ for i in a_aa:
     actual_string = actual_string + dummy + "&#32"
 actual_string = actual_string + "&#3077;&#3074;&#32;&#3077;&#3075"
 
-actual_string = actual_string + "<br>"
+actual_string = actual_string + "<br>"+"<br>"
 
 c = 0
 for i in all_comb:
@@ -53,9 +53,9 @@ for i in all_comb:
     c += 1
     if c == 19:
         c = 0
-        actual_string = actual_string + "<br>"
+        actual_string = actual_string + "<br>" + "<br>"
 
-actual_string = actual_string + "<br>"
+actual_string = actual_string + "<br>" + "<br>"
 
 print actual_string
 
