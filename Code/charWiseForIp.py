@@ -5,7 +5,7 @@ c = 0
 # Load the image
 for i in range(1,2):
 	#filen = "q/q"+str(i)+".png"
-	filen = "000.jpg"
+	filen = "img.jpg"
 	img = cv2.imread(filen)
 	#print img.shape
 	img = cv2.resize(img,(1280,768))

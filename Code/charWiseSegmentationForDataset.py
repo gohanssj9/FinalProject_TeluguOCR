@@ -48,11 +48,11 @@ for i in range(1,37):
 		    x,y,w,h = cv2.boundingRect(cnt)
 		    #cv2.drawContours(img [cnt], -1, (255, 255, 255), -1)
 		    if x-5 >= 0 or y-10 >= 0:
-		    	cv2.rectangle(img,(x-5,y-10),(x+w+5,y+h+10),(255,255,255),2)
-		    	cv2.rectangle(thresh_color,(x-5,y-10),(x+w+5,y+h+10),(255,255,255),2)
+		    	cv2.rectangle(img,(x-5,y-10),(x+w+5,y+h+10),(0,255,0),2)
+		    	cv2.rectangle(thresh_color,(x-5,y-10),(x+w+5,y+h+10),(0,255,0),2)
 		    else:
-		    	cv2.rectangle(img,(x,y),(x+w+5,y+h+10),(255,255,255),2)
-		    	cv2.rectangle(thresh_color,(x,y),(x+w+5,y+h+10),(255,255,255),2)
+		    	cv2.rectangle(img,(x,y),(x+w+5,y+h+10),(0,255,0),2)
+		    	cv2.rectangle(thresh_color,(x,y),(x+w+5,y+h+10),(0,255,0),2)
 
 		    if y -10 <= 0 or x-5 <= 0:
 		    	letter = img[y:y+h+10,x:x+w+5]
@@ -63,7 +63,7 @@ for i in range(1,37):
 		    	print c,x,y,x-5,y-10
 		    font = cv2.FONT_HERSHEY_SIMPLEX
 		    #cv2.putText(img,str(c+1),(x+(w/2),y), font, 0.4,(0,0,255),1,cv2.LINE_AA)
-		    cv2.imwrite("FinalProject_TeluguOCR/TeluguDataset/"+str(c+1)+"/"+str(c+1)+".JPEG",letter)
+		    #cv2.imwrite("FinalProject_TeluguOCR/TeluguDataset/"+str(c+1)+"/"+str(c+1)+".JPEG",letter)
 		    #cv2.imwrite("W22"+str(c+1)+".JPEG",letter)
 		c+=1
 
